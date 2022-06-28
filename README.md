@@ -20,6 +20,7 @@ This repository is (at least, will be, or aims to be) a proposal for a standard 
   - gathering simple statistics, 
   - implementing a custom search in the host language,
   - having basic control on saving and backtracking state, at least on solver that supports that.
+- Be performant. Using most of the API of UniCP must be nearly overhead-free. API calls that involve a large overhead (such as callbacks to the host language) must be optionnal, but available.
 - Be open. Its licence should allow anyone to use it freely and without constraints (pun intented)
 
 ## Non-goals
