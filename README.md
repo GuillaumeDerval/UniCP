@@ -10,6 +10,8 @@ This repository is (at least, will be, or aims to be) a proposal for a standard 
 - Be simple. The API should be minimalistic, in order to minimize the maintenance burden.
 - Be backward-compatible. Older, unmaintained solvers should be able to discuss with newer high-level APIs or application, and conversely.
 - Be extensible (or even forward-compatible). Different CP solvers have different specificities; the most obvious being custom constraints, but it can also be custom types of variables, search heuristics.
+- Be discoverable. Applications and high-level APIs should be able to know the capabilities of the underlying solver, aka the features available via UniCP.
+- Be safe. Memory and thread safety is important, and allowing to have multiple instances of the solver running concurrently too.
 - Be usable. A lot of control on the solver should be available. This includes:
   - starting and stopping the search,
   - modifying parameters on-the-fly (including adding new variables and constraints)
