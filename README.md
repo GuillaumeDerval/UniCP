@@ -12,7 +12,8 @@ This repository is (at least, will be, or aims to be) a proposal for a standard 
 6. Be extensible (or even forward-compatible). Different CP solvers have different specificities; the most obvious being custom constraints, but it can also be custom types of variables, search heuristics.
 7. Be discoverable. Applications and high-level APIs should be able to know the capabilities of the underlying solver, aka the features available via UniCP.
 8. Be safe. Memory and thread safety is important, and allowing to have multiple instances of the solver running concurrently is too (avoid globally mutable state).
-9. Be usable. A lot of control on the solver should be available. This includes:
+9. Be platform-independent. No hypothesis on the destination platform should be taken, apart that it implements dynamic linking and that it has a C compiler.
+10. Be usable. A lot of control on the solver should be available. This includes:
    1. starting and stopping the search,
    2. modifying parameters on-the-fly (including adding new variables and constraints)
    3. querying and modifying domains, 
@@ -20,8 +21,8 @@ This repository is (at least, will be, or aims to be) a proposal for a standard 
    5. gathering simple statistics, 
    6. implementing a custom search in the host language,
    7. having basic control on saving and backtracking state, at least on solver that supports that.
-10. Be performant. Using most of the API of UniCP must be nearly overhead-free. API calls that involve a large overhead (such as callbacks to the host language) must be optionnal, but available.
-11. Be open. Its licence should allow anyone to use it freely and without constraints (pun intented)
+11. Be performant. Using most of the API of UniCP must be nearly overhead-free. API calls that involve a large overhead (such as callbacks to the host language) must be optionnal, but available.
+12. Be open. Its licence should allow anyone to use it freely and without constraints (pun intented)
 
 ## Non-goals
 
