@@ -4,24 +4,24 @@ This repository is (at least, will be, or aims to be) a proposal for a standard 
 
 ## Goals
 
-- Be developper-oriented. UniCP is a low-level API, to be used by CP solver (such as Gecode, Choco, OscaR or MiniCP) developpers and high-level APIs (such as CPMpy) or application developpers, allowing these tools to be used interchangeably.
-- Be researcher-minded. CP solvers are used a lot by the CP research community itself.
-- Be user-minded. The API should allow to build easy-to-use high-level APIs 
-- Be simple. The API should be minimalistic, in order to minimize the maintenance burden.
-- Be backward-compatible. Older, unmaintained solvers should be able to discuss with newer high-level APIs or application, and conversely.
-- Be extensible (or even forward-compatible). Different CP solvers have different specificities; the most obvious being custom constraints, but it can also be custom types of variables, search heuristics.
-- Be discoverable. Applications and high-level APIs should be able to know the capabilities of the underlying solver, aka the features available via UniCP.
-- Be safe. Memory and thread safety is important, and allowing to have multiple instances of the solver running concurrently is too.
-- Be usable. A lot of control on the solver should be available. This includes:
-  - starting and stopping the search,
-  - modifying parameters on-the-fly (including adding new variables and constraints)
-  - querying and modifying domains, 
-  - querying solver-state, 
-  - gathering simple statistics, 
-  - implementing a custom search in the host language,
-  - having basic control on saving and backtracking state, at least on solver that supports that.
-- Be performant. Using most of the API of UniCP must be nearly overhead-free. API calls that involve a large overhead (such as callbacks to the host language) must be optionnal, but available.
-- Be open. Its licence should allow anyone to use it freely and without constraints (pun intented)
+1. Be developper-oriented. UniCP is a low-level API, to be used by CP solver (such as Gecode, Choco, OscaR or MiniCP) developpers and high-level APIs (such as CPMpy) or application developpers, allowing these tools to be used interchangeably.
+2. Be researcher-minded. CP solvers are used a lot by the CP research community itself.
+3. Be user-minded. The API should allow to build easy-to-use high-level APIs 
+4. Be simple. The API should be minimalistic, in order to minimize the maintenance burden.
+5. Be backward-compatible. Older, unmaintained solvers should be able to discuss with newer high-level APIs or application, and conversely.
+6. Be extensible (or even forward-compatible). Different CP solvers have different specificities; the most obvious being custom constraints, but it can also be custom types of variables, search heuristics.
+7. Be discoverable. Applications and high-level APIs should be able to know the capabilities of the underlying solver, aka the features available via UniCP.
+8. Be safe. Memory and thread safety is important, and allowing to have multiple instances of the solver running concurrently is too.
+9. Be usable. A lot of control on the solver should be available. This includes:
+   1. starting and stopping the search,
+   2. modifying parameters on-the-fly (including adding new variables and constraints)
+   3. querying and modifying domains, 
+   4. querying solver-state, 
+   5. gathering simple statistics, 
+   6. implementing a custom search in the host language,
+   7. having basic control on saving and backtracking state, at least on solver that supports that.
+10. Be performant. Using most of the API of UniCP must be nearly overhead-free. API calls that involve a large overhead (such as callbacks to the host language) must be optionnal, but available.
+11. Be open. Its licence should allow anyone to use it freely and without constraints (pun intented)
 
 ## Non-goals
 
