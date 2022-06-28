@@ -27,4 +27,4 @@ This repository is (at least, will be, or aims to be) a proposal for a standard 
 
 - Supporting complex, too implementation-specific behaviors such as LNS. However, it should be possible to implement them in the application using UniCP.
 - Implementing constraints in the host language.
-- Exposing complex structures (such as sparsesets, ...) to the host language. Structures that should not be exposed to the user of the CP solver should not be available 
+- Exposing complex structures (such as sparsesets, ...) to the host language. Structures that should not be exposed to the user of the CP solver should not be available.
